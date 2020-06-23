@@ -33,7 +33,7 @@ public class Encryptor
         keylength = key.length();
         for(i =0 ; i < n; i++)
         {
-            data = (int)buff[i] & 0xff;
+            data = (int)buff[i] & 0xff;     //  0xff = 255   -> lower 8 bits
             data = data ^ (int)key.charAt(i%keylength);
             buff[i] = (byte)data;
         }
